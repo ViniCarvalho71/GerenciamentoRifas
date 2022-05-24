@@ -1,13 +1,14 @@
-<?php
 
-
+<?php 
 $hostname = "sql102.epizy.com";
-$database = "epiz_31454026_RIFAS";
+$dbname = "epiz_31454026_RIFAS";
 $username = "epiz_31454026";
 $password = "RLvpAkgFJNv";
 
-if($conecta = mysqli_connect($hostname, $username, $password, $database)){
-    echo 'Conected succesfully!!';
-} else {
-    echo 'Error: '.mysqli_connect_error();
+try {
+    $pdo = new PDO('mysql:host='.$hostname.';dbname='.$dbname, $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //echo 'Conexão realizada com sucesso';
+} catch(PDOException $e) {
+    echo 'Erro:'.$e->getMessage();
 }
