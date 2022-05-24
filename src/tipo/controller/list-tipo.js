@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     $('#table-tipo').DataTable({
         "processing": true,
         "serverSide": true,
@@ -7,7 +8,7 @@ $(document).ready(function() {
             "type": "POST"
         },
         "language": {
-            "url": "libs/DataTables/pt_br.json"
+            "url": "libs/dataTables/pt_br.json"
         },
         "columns": [{
                 "data": 'ID',
