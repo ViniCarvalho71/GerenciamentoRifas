@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-    $('#table-tipo').DataTable({
+    $('#table-compradores').DataTable({
         "processing": true,
         "serverSide": true,
         "ajax": {
-            "url": "src/tipo/model/list-tipo.php",
+            "url": "src/compradores/model/list-compradores.php",
             "type": "POST"
         },
         "language": {

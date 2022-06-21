@@ -5,7 +5,7 @@ $(document).ready(function() {
         $('.modal-title').empty()
 
 
-        $('.modal-title').append('Adicionar novo tipo de tipo')
+        $('.modal-title').append('Adicionar novo tipo de funcionario')
 
         $('.modal-body').load('src/tipo/view/form-tipo.html')
 

@@ -2,13 +2,13 @@ $(document).ready(function() {
 
     $('.close, #close').click(function(e) {
         e.preventDefault()
-        $('#modal-tipo').modal('hide')
+        $('#modal-compradores').modal('hide')
     })
 
     $('.btn-save').click(function(e) {
         e.preventDefault()
 
-        let dados = $('#form-tipo').serialize()
+        let dados = $('#form-compradores').serialize()
 
         dados += `&operacao=${$('.btn-save').attr('data-operation')}`
 
@@ -17,7 +17,7 @@ $(document).ready(function() {
             dataType: 'json',
             assync: true,
             data: dados,
-            url: 'src/tipo/model/save-tipo.php',
+            url: 'src/compradores/model/save-compradores.php',
             success: function(dados) {
                 Swal.fire({
                     title: 'Sistema de rifas',
@@ -26,8 +26,8 @@ $(document).ready(function() {
                     confirmButtonText: 'OK'
                 })
 
-                $('#modal-tipo').modal('hide')
-                $('#table-tipo').DataTable().ajax.reload()
+                $('#modal-compradores').modal('hide')
+                $('#table-compradores').DataTable().ajax.reload()
             }
         })
     })

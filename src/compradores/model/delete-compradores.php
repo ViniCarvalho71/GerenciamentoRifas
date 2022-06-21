@@ -5,7 +5,7 @@
 
     $ID = $_REQUEST['ID'];
 
-    $sql = "DELETE  FROM COMPRADORES WHERE ID = $ID";
+    $sql = "DELETE  FROM COMPRADOR WHERE ID = $ID";
 
     $resultado = $pdo->query($sql);
 

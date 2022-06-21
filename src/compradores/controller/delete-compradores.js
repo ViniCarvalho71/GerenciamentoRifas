@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('#table-tipo').on('click', 'button.btn-delete', function(e) {
+    $('#table-compradores').on('click', 'button.btn-delete', function(e) {
 
         e.preventDefault()
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
                     dataType: 'json',
                     assync: true,
                     data: ID,
-                    url: 'src/tipo/model/delete-tipo.php',
+                    url: 'src/compradores/model/delete-compradores.php',
                     success: function(dados) {
                         Swal.fire({
                             title: 'Sistema de Rifas',
@@ -30,7 +30,7 @@ $(document).ready(function() {
                             confirmButtonText: 'OK'
                         })
 
-                        $('#table-tipo').DataTable().ajax.reload()
+                        $('#table-compradores').DataTable().ajax.reload()
                     }
                 })
 

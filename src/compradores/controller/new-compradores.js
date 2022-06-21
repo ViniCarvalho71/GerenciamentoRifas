@@ -5,19 +5,19 @@ $(document).ready(function() {
         $('.modal-title').empty()
 
 
-        $('.modal-title').append('Adicionar novo tipo de tipo')
+        $('.modal-title').append('Adicionar novo comprador')
 
-        $('.modal-body').load('src/tipo/view/form-tipo.html')
+        $('.modal-body').load('src/compradores/view/form-compradores.html')
 
         $('.btn-save').show()
 
         $('.btn-save').attr('data-operation', 'insert')
 
-        $('#modal-tipo').modal('show')
+        $('#modal-compradores').modal('show')
     })
 
     $('.close, #close').click(function(e) {
         e.preventDefault()
-        $('#modal-tipo').modal('hide')
+        $('#modal-compradores').modal('hide')
     })
 })
