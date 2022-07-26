@@ -30,7 +30,18 @@ $(document).ready(function() {
                         $('#SENHA').val(dado.dados.SENHA)
                         $('#NOME').attr('readonly', 'true')
                         $('#CELULAR').attr('readonly', 'true')
-                        $('#TIPO_ID').val(dado.dados.TIPO_ID)
+                        $.ajax({
+                            type: 'POST',
+                            dataType: 'json',
+                            url: 'src/tipo/model/all-tipo.php',
+                            success: function(dados) {
+                                for (const result of dados) {
+                                    if (dado.dados.TIPO_ID == result.ID) {
+                                        $('#TIPO_ID').append(`<option value="${result.ID}">${result.DESCRICAO}</option>`)
+                                    }
+                                }
+                            }
+                        })
                         $('#TIPO_ID').attr('readonly', 'true')
 
                     })

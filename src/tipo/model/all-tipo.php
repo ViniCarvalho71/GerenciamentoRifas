@@ -5,7 +5,7 @@
 
 
     $dados = array();
-    $sql = "select * from TIPO ";
+    $sql = "select ID, NOME AS DESCRICAO from TIPO ";
     $resultado = $pdo->query($sql);
 
     if($resultado){
